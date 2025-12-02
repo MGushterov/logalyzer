@@ -180,5 +180,5 @@ pytest
 
 ## **License**
 
-MIT License (or whatever license you want; add it here).
+MIT License
 
