@@ -1,4 +1,4 @@
-from typing import Iterable, Iterator
+from typing import Iterator
 from dataclasses import dataclass
 from datetime import datetime
 from logalyzer.models import StatusClass, HTTPMethod, LogRecord

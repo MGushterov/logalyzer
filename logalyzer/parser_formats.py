@@ -63,13 +63,13 @@ class ApacheCombinedFormat(LogFormat):
         # timestamp conversion to datetime
         try:
             timestamp = dt.datetime.strptime(ts_str, "%d/%b/%Y:%H:%M:%S %z")
-        except ValueError as exc:
+        except ValueError:
             raise LogParserError(f"Invalid timestamp {ts_str!r}")
 
         # method conversion to HTTPMethod Enum
         try:
             method = HTTPMethod[method_str]
-        except KeyError as exc:
+        except KeyError:
             raise LogParserError(f"Unsupported HTTP method {method_str!r}")
 
         # status conversion to integer
@@ -101,5 +101,5 @@ FORMAT_REGISTRY: dict[str, LogFormat] = {
 def get_format(name: str) -> LogFormat:
     try:
         return FORMAT_REGISTRY[name]
-    except KeyError as exc:
+    except KeyError:
         raise FormatNotFound('Format not found in registry', 404)

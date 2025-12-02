@@ -2,7 +2,6 @@ import unittest
 from logalyzer.models import *
 from datetime import datetime
 from logalyzer.parser import parse_line
-from logalyzer.reader import iter_lines, iter_records, iter_records_multi_sequential
 
 
 class TestLogRecord(unittest.TestCase):

@@ -1,0 +1,26 @@
+[tool.ruff]
+# Paths to check
+src = ["logalyzer", "tests"]
+
+# Target Python version
+target-version = "py312"
+
+# Enable basic rules (Ruff default = E,F)
+# E = pycodestyle errors, F = pyflakes
+select = ["E", "F"]
+
+# You can ignore specific rules globally if needed
+ignore = [
+    "E501",  # line too long (if you don't care yet)
+]
+
+# Exclude some paths if needed
+exclude = [
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+# Show fixable issues separately
+show-fixes = true

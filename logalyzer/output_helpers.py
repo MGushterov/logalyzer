@@ -1,5 +1,4 @@
 from logalyzer.stats import GlobalStats
-from datetime import datetime
 from logalyzer.models import HTTPMethod
 
 
